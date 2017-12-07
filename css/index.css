@@ -88,6 +88,10 @@ h1 {
 	width: 88px;
 	height: 39px;
 	background: #f1f1f1;
+	text-align: center;
+	color: #595959;
+	padding-left: 15px;
+	border: none;
 }
 .search form input[type='text'] {
 	border: none;
@@ -184,6 +188,7 @@ h1 {
 /*横幅样式*/
 .banner img{
 	display: block;
+	max-width: 100%;
 }
 
 .main {
@@ -241,6 +246,7 @@ h1 {
 	cursor: pointer;
 	border-top: 1px solid #fff;
 	background: rgba(255, 255, 255, .4) url(../image/sqear.png) 40px center no-repeat;
+	transition: all 0.3s;
 }
 .main_sub_aside ul li:hover {
 	background-color: rgba(0,0,0,0);
@@ -361,9 +367,10 @@ h1 {
 	background: none;
 }
 .main_sub_content .col_3 form input[type="checkbox"] {
-	transform: translate(0, 3px);
-	margin-top: 13px;
+	transform: translate(0, 1px);
+	margin-top: 10px;
 	margin-left: 32px;
+	margin-right: 3px;
 }
 .main_sub_content .col_3 form button {
 	width: 238px;
@@ -479,6 +486,10 @@ h1 {
 	background: #000;
 	float: left;
 	position: relative;
+	transition: transform 0.5s;
+}
+.main_sup_part .main_col1 ul li a:hover {
+	transform: scale(1.05);
 }
 .main_sup_part .main_col1 ul li:nth-child(1) a{
 	background: url(../image/courses1.png) -96px -86px no-repeat;
@@ -529,6 +540,13 @@ h1 {
 	display: flex;
 	justify-content: space-between;
 }
+.main_sup_part .main_col2 ul li {
+	cursor: pointer;
+	transition: transform 0.5s;
+}
+.main_sup_part .main_col2 ul li:hover {
+	transform: scale(1.05);
+}
 .main_sup_part .main_col3 .news {
 	padding-top: 22px;
 	padding-bottom: 23px;
@@ -575,16 +593,6 @@ h1 {
 .main_sup_part .main_col3 .news ul li span {
 	float: right;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 .content {
@@ -677,7 +685,9 @@ h1 {
 	color: #aaa;
 	margin-right: 11px;
 }
-
+.main_sup_content .main_sup_title a:hover {
+	color: #9e8841;
+}
 
 
 
