@@ -168,6 +168,8 @@ $(document).ready(function() {
 	
 	
 	var slider = $('.banner').carousel(imgGroup);
+	$('.banner img').css('height', $('.banner').height());
+	
 	$('.prev').eq(0).click(function() {
 		slider.go(-1);
 	});
