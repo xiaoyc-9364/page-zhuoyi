@@ -1,0 +1,34 @@
+
+.slide_wrap{
+	overflow: hidden;
+	position: relative;
+}
+.slide_main{
+	position: absolute;
+	height: 100%;
+	z-index: 1;
+}
+.slide_tab {
+	padding:5px 10px;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	bottom: 10%;
+	z-index: 2;
+	background: rgba(0,0,0,.5);
+	border-radius: 15px;
+
+}
+.slide_tab li {
+	width: 15px; 
+	height: 15px; 
+	border-radius: 50%; 
+	background: #ffffff; 
+	cursor: pointer;
+	margin: 0px 8px;
+}
+.slide_tab .active {
+	background: red;
+}

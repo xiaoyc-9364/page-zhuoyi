@@ -5,7 +5,9 @@
 	<title>卓一企管</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/index.css">
-
+	<link rel="stylesheet" href="css/slide.css">
+	<script src="js/jQuery.js"></script>
+	<script src="js/index.js"></script>
 </head>
 <body>
 	<!-- 头部 -->
@@ -67,17 +69,18 @@
 	</nav>
 	<!-- 横幅 -->
 	<div class="banner">
-		<ul>
-			<li><a href="javascript:void(0);"><img src="image/sliderImg1.jpg" alt=""></a></li>
-		</ul>
+	<!-- 	<ul>
+			<li><a href="javascript:void(0);"><img src="image/banner1.jpg" alt=""></a></li>
+			<li><a href="javascript:void(0);"><img src="image/banner2.jpg" alt=""></a></li>
+		</ul> -->
 	</div>
 	<!-- 主题 -->
 	<main class="main">
 		<div class="main_sub clearfix">
 			<aside class="main_sub_aside">
 				<div class="aside_nav_title clearfix">
-					<h2>课程分类</h2>
-					<span><a href="javascript:void(0);" class="more">更多</a></span>
+					<h2>课程</h2>
+					<a href="javascript:void(0);" class="more">更多</a>
 				</div>
 				<ul>
 					<li>生产管理</li>
@@ -139,8 +142,8 @@
 					</form>
 				</div>
 				<div class="show_video">
-					<a href="javascript:void(0);"><img src="image/image1.png" alt=""></a>
-					<a href="javascript:void(0);"><img src="image/image2.png" alt=""></a>
+					<a href="javascript:void(0);"><img src="image/video1.jpg" alt=""></a>
+					<a href="javascript:void(0);"><img src="image/video2.jpg" alt=""></a>
 				</div>
 			</article>
 		</div>
@@ -166,9 +169,9 @@
 						<span><a href="javascript:void(0);">更多></a></span>
 					</div>
 					<div class="client_case_main">
-					<!-- 	<img src="image/people.png" alt="">
-						<p>广州天创股份有限公司培训主管</p>
-						<p>一直头疼终端门店销售人员的培训问题，卓一企业培训提供了一个很好的解决方案。很方便进行一线人员的培训，同时辅以跟踪考核体系，让培训效率得到了很大的提升。</p> -->
+						<img src="image/people.png" alt="">
+						<p class="projects">广州天创股份有限公司培训主管</p>
+						<p>一直头疼终端门店销售人员的培训问题，卓一企业培训提供了一个很好的解决方案。很方便进行一线人员的培训，同时辅以跟踪考核体系，让培训效率得到了很大的提升。</p>
 					</div>
 				</div>
 				<div class="content call_me">
@@ -177,13 +180,13 @@
 						<span><a href="javascript:void(0);">更多></a></span>
 					</div>
 					<div class="call_me_main">
-					<!-- 	<h3>卓一企业管理顾问有限公司</h3>
-						<p>公司电话：</p>
+						<h3>卓一企业管理顾问有限公司</h3>
 						<ul>
+							<li>公司电话：</li>
 							<li>苏州：+86 512 68653001</li>
 							<li>上海：+86 512 68653001</li>
 							<li>南京：+86 512 68653001</li>
-						</ul> -->
+						</ul>
 					</div>
 				</div>
 			</aside>
@@ -192,61 +195,70 @@
 					<div class="main_sup_title clearfix">
 						<h2>课程分类</h2>
 						<a href="javascript:void(0);">更多></a>
-						<ul class="clearfix">
-							<li>
-								<a href="javascript:void(0);">
-									<span>生产管理</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:void(0);">
-									<span>质量管理</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:void(0);">
-									<span>采购物流</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:void(0);">
-									<span>领导力管理技能</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:void(0);">
-									<span>人力资源管理</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:void(0);">
-									<span>职业能力</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:void(0);">
-									<span>销售与市场</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:void(0);">
-									<span>职业资格认证</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:void(0);">
-									<span>ISO国际</span>
-								</a>
-							</li>
-
-							<li>
-								<a href="javascript:void(0);">
-									<span>客户服务</span>
-								</a>
-							</li>
-							
-						</ul>
 					</div>
+					<ul class="clearfix">
+						<li>
+							<a href="javascript:void(0);">
+								<img src="image/kc1.jpg" alt="">
+								<span>生产管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">
+								<img src="image/kc2.jpg" alt="">
+								<span>质量管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">
+								<img src="image/kc3.jpg" alt="">
+								<span>采购物流</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">
+								<img src="image/kc4.jpg" alt="">
+								<span>领导力管理技能</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">
+								<img src="image/kc5.jpg" alt="">
+								<span>人力资源管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">
+								<img src="image/kc6.jpg" alt="">
+								<span>职业能力</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">
+								<img src="image/kc7.jpg" alt="">
+								<span>销售与市场</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">
+								<img src="image/kc8.jpg" alt="">
+								<span>职业资格认证</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">
+								<img src="image/kc9.jpg" alt="">
+								<span>ISO国际</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="javascript:void(0);">
+								<img src="image/kc10.jpg" alt="">
+								<span>客户服务</span>
+							</a>
+						</li>
+					</ul>
 				</div>
 				<div class="main_sup_content main_col2 clearfix">
 					<div class="main_sup_title clearfix">
@@ -266,27 +278,27 @@
 						<a href="javascript:void(0);">更多></a>
 					</div>
 					<div class="news clearfix">
-						<a href="#"></a>
+						<a href="#"><img src="image/news.jpg" alt=""></a>
 						<ul>
 							<li>
-								<a href="#">基层干部管理能力提升训练培训圆满结束!</a>
-								<span>2015-02-20</span>
+								<a href="#">基层干部管理能力提升训练培训圆满结束!<span>2015-02-20</span></a>
+								
 							</li>
 							<li>
-								<a href="#">中层干部管理能力提升训练培训圆满结束!</a>
-								<span>2015-02-20</span>
+								<a href="#">中层干部管理能力提升训练培训圆满结束!<span>2015-02-20</span></a>
+								
 							</li>
 							<li>
-								<a href="#">卓一企管“采山水幽静，寻心灵珍宝”火凤凰体验式...</a>
-								<span>2015-02-20</span>
+								<a href="#">卓一企管“采山水幽静，寻心灵珍宝”火凤凰体验式...<span>2015-02-20</span></a>
+								
 							</li>
 							<li>
-								<a href="#">苏州某大型企业“班组长管理技能提升训练”培训圆...</a>
-								<span>2015-02-20</span>
+								<a href="#">苏州某大型企业“班组长管理技能提升训练”培训圆...<span>2015-02-20</span></a>
+								
 							</li>
 							<li>
-								<a href="#">江苏某大型企业“品质控制与食品安全”培训圆满...</a>
-								<span>2015-02-20</span>
+								<a href="#">江苏某大型企业“品质控制与食品安全”培训圆满...<span>2015-02-20</span></a>
+								
 							</li>
 						</ul>
 					</div>
@@ -296,6 +308,47 @@
 		
 	</main>
 	<!-- 页脚 -->
-	<footer class="footer"></footer>
+	<footer class="footer">
+		<div class="footer_main clearfix">
+			<dl> 
+				<dt><a href="#">卓一活动</a></dt>
+				<dd><a href="#">公司简介</a></dd>
+				<dd><a href="#">发展历程</a></dd>
+				<dd><a href="#">业务流程</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#">客户体验</a></dt>
+				<dd><a href="#">公司简介</a></dd>
+				<dd><a href="#">发展历程</a></dd>
+				<dd><a href="#">业务流程</a></dd>
+				<dd><a href="#">服务理念</a></dd>
+				<dd><a href="#">服务站点</a></dd>
+
+			</dl>
+			<dl>
+				<dt><a href="#">加入卓一</a></dt>
+				<dd><a href="#">公司简介</a></dd>
+				<dd><a href="#">发展历程</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#">网站地图</a></dt>
+				<dd><a href="#">公司简介</a></dd>
+				<dd><a href="#">发展历程</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#">友情链接</a></dt>
+				<dd><a href="#">公司简介</a></dd>
+				<dd><a href="#">发展历程</a></dd>
+				<dd><a href="#">业务流程</a></dd>
+				<dd><a href="#">服务理念</a></dd>
+				<dd><a href="#">服务站点</a></dd>
+			</dl>
+			<div class="Qr_code">
+				<img src="image/Qr_code.jpg" alt="">
+				<p>微信扫一扫，关注我们</p>
+			</div>
+		</div>
+		<p>苏州卓一企业管理顾问有限公司  备案号：苏ICP备11053057号-1</p>
+	</footer>
 </body>
 </html>
