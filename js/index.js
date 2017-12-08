@@ -63,13 +63,15 @@ Carousel.prototype = {
 
 		oWrapper.append(this.oImgUl).append(this.dotUl);	//添加页面
 		this.oImgUl.first().clone(true).appendTo(this.oImgUl); //添加辅助图片
+
 		var aLi = this.oImgUl.find('li');
 		aLi.each(function(index) {
 			$(this).css({					//定位图片
 				position: 'absolute',
-				left: index * _this.wrapWidth
+				left: index * _this.wrapWidth + 'px'
 				});
 		});
+	
 	},
 
 	addEvent: function() {		//绑定事件
@@ -128,6 +130,24 @@ Carousel.prototype = {
 		this.paused;
 		this.showCurrentImg(this.cur + n);
 		this.autoPlay();
+	},
+	reSize: function(newWidth) {
+		var oImgarr = this.oImgUl;
+		var _this = this
+		clearInterval(this.timer);
+		this.wrapWidth = newWidth;
+		oImgarr.find('img').each(function() {
+			$(this).css({
+				width: newWidth,
+			});
+		});
+		oImgarr.find('li').each(function(index) {
+			$(this).css({
+				left: index * newWidth,
+			});
+		});
+		this.showCurrentImg(this.cur);
+		this.autoPlay();
 	}
 };
 
@@ -137,15 +157,27 @@ Carousel.prototype = {
 $(document).ready(function() {
 	var imgGroup = {
 	imgData: [
-		{title: '百度', alt:'百度', href: 'http://www.baidu.com', src: 'image/banner1.jpg'},
-		{title: '淘宝', alt:'淘宝', href: 'http://www.taobao.com', src: 'image/banner2.jpg'},
+		{title: '', alt:'', href: 'javascipt:void(0);', src: 'image/banner1.jpg'},
+		{title: '', alt:'', href: 'javascipt:void(0);', src: 'image/banner2.jpg'},
+		{title: '', alt:'', href: 'javascipt:void(0);', src: 'image/banner4.jpg'},
+		{title: '', alt:'', href: 'javascipt:void(0);', src: 'image/banner5.jpg'},
+		{title: '', alt:'', href: 'javascipt:void(0);', src: 'image/banner6.jpg'},
 	],
-	timeout: 2000,
+	timeout: 2500,
 	};
 	
 	
 	var slider = $('.banner').carousel(imgGroup);
-	console.log(slider)
+	$('.prev').eq(0).click(function() {
+		slider.go(-1);
+	});
+	$('.next').eq(0).click(function() {
+		slider.go(1);
+	});
+	$(window).resize(function() {
+		slider.reSize($('.banner').width());
+	});
+
 });
 
 

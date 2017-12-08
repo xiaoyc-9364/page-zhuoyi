@@ -291,22 +291,42 @@ h1 {
 }
 /*横幅样式*/
 .banner {
-	height: 513px;
-}
-.banner ul li a {
-	display: block;
-	height: 513px;
-	position: relative;
+	min-width: 1221px;
+	height:513px;
 }
 .banner img{
 	display: block;
-	height: 513px;
+	height:513px;
+	
+}
+.banner button {
+	width: 45px;
+	height: 70px;
+	border: none;
+	font-size: 50px;
+	color: #fff;
+	background: rgba(0,0,0,.05);
 	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translate(-50%, 0);
+	top: 50%;
+	transform: translate(0, -50%);
+	z-index: 999;
+	cursor: pointer;
+	
+}
+.banner button:hover {
+	background: rgba(0,0,0,.3);
+}
+.banner button.prev {
+	border-radius: 15px 5px 5px 15px;
+	left: 5%;
+}
+.banner button.next {
+	border-radius: 5px 15px 15px 5px;
+	right: 5%;
 }
 
+
+/*页面主体样式*/
 .main {
 	margin: 0 auto;
 	padding-top: 32px;
@@ -527,8 +547,98 @@ h1 {
 }
 .main_sup_aside .date {
 	height: 286px;
-	background: #e3e3e3;
+	width: 273px;
+	border: 1px solid #d9d9d9;
+	border-radius: 5px;
+	box-shadow: 0 9px 26px -7px #e2e2e2;
+	position: relative;
+	z-index: 10;
 }
+.main_sup_aside .date::after {
+	content: '';
+	display: block;
+	width: 265px;
+	height: 2px;
+	position: absolute;
+	bottom: -4px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: 1;
+	border: 1px solid #d9d9d9;
+	box-shadow: 0 3px 26px -7px #e2e2e2;
+	border-top: none;
+	border-radius: 0 0 5px 5px;
+
+}
+.date .cal {
+	font-family: '宋体';
+}
+.date .cal caption{
+	font-size: 16px;
+	line-height: 24px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	padding: 8px 2px 0 2px;
+	background: #9e8841;
+	border-radius: 4px 4px 0 0;
+}
+.date .cal caption a {
+	display: block;
+	width: 0px;height: 0px;
+	border: 5px solid #fff;
+	border-width: 5px 8px;
+	margin-top: 7px;
+}
+.date .cal caption a[rel="prev"] {
+	float: left;
+	border-color: transparent #FFF transparent transparent;
+}
+.date .cal caption a[rel="next"] {
+	float: right;
+	border-color: transparent transparent transparent #FFF;
+}
+.date .cal th {
+	background: #9e8841;
+	width: 39px;
+	line-height: 24px;
+	font-size: 12px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
+.date .cal tbody {
+	background: #fbfbfb;
+}
+.date .cal td {
+	cursor: pointer;
+	font-size: 14px;
+	width: 39px;
+	height: 37px;
+	text-align: center;
+	vertical-align: middle;
+}
+.date .cal td.null {
+	color: #aeaeae;
+}
+.date .cal td a {
+	display: block;
+	width: 39px;
+	height: 37px;
+	line-height: 37px;
+	color: #404040;
+}
+.date .cal td a.active {
+	background: url(../image/date_mark.png)  -2px 5px no-repeat;
+}
+.date .cal td a:visited {
+	background: url(../image/date_mark.png)  -2px 5px no-repeat;
+}
+.date .cal td a:hover {
+	background-color: #ececec;
+	text-decoration: underline;
+}
+
 .main_sup_aside .content {
 	padding: 0 10px 0 10px;
 	margin-bottom: 30px;
@@ -618,9 +728,6 @@ h1 {
 	margin-bottom: 19px;
 
 }
-
-
-
 
 .main_sup_part {
 	float: right;
@@ -726,25 +833,7 @@ h1 {
 	font-size: 12px;
 	color: #8b8b8b;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*页脚样式*/
 .footer {
 	min-height: 326px;
 	min-width: 1221px;
@@ -758,7 +847,9 @@ h1 {
 	padding-top: 34px;
 	padding-left: 66px;
 	position: relative;
-
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .footer_main  dl {
 	width: 122px;
