@@ -208,6 +208,7 @@ h1 {
 	border: none;
 	float: left;
 	cursor:pointer;
+	letter-spacing: 5px;
 }
 .search form ul li {
 	float: left;
@@ -895,6 +896,7 @@ h1 {
 	position: absolute;
 	bottom: 0;
 	color: #6b6b6b;
+	font-size: 12px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
